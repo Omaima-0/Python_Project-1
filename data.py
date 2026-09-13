@@ -58,3 +58,48 @@ print("---------------------------------------------------")
 new_list = [student for student in students if student["track"]
             == "AI" and student["age"] > 24]
 print(new_list)
+print("---------------------------------------------------")
+
+
+# Part 3: Aggregating
+# 8. Calculate the average age of all students.
+sum_age = 0
+for student in students:
+    sum_age += student["age"]
+
+    average_age = sum_age / len("age")
+
+print(average_age)
+
+print("---------------------------------------------------")
+# 9. Calculate the total hours studied across the whole cohort.
+total_hours = 0
+for student in students:
+    total_hours += student["hours_studied"]
+    print(total_hours)
+
+
+print("---------------------------------------------------")
+
+# 10. Find the student who studied the most hours. Print their name and hours.
+top_student = students[0]
+for student in students:
+    if student["hours_studied"] > top_student["hours_studied"]:
+        top_student = student
+        print(top_student["name"], top_student["hours_studied"])
+
+
+print("--------------------------------------------------------")
+
+# 11. print the student final grade
+for student in students:
+    sum_scores = 0
+    sum_scores = sum(student["scores"])
+
+    average_scores = sum_scores / len(student["scores"])
+    final_grade = average_scores
+
+    print(student["name"], final_grade)
+
+
+print("---------------------------------------------")
