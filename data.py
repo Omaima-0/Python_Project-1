@@ -32,7 +32,7 @@ for student in students:
 
 
 # Part 2: Filtering (the most common data operation)
-
+# 4.
 new_list = []
 for student in students:
     if student["track"] == "AI":
@@ -103,3 +103,14 @@ for student in students:
 
 
 print("---------------------------------------------")
+
+# Part 4: Transforming (reshaping data into something new)
+# 12. Write a list comprehension that produces a new list of dictionaries, each with only two keys: `name` and `average_score`.
+new_list = [{"name": student["name"], "average_score": sum(
+    student["scores"]) / len(student["scores"])} for student in students]
+print(new_list)
+
+# 13. Build a dictionary that maps each track to the number of students in it, like `{"AI": 3, "Data": 2, "Web": 1}`.
+
+
+# 14. 14. Create a set of all the unique tracks in the dataset. Explain in a comment why a set is the right tool here instead of a list.
